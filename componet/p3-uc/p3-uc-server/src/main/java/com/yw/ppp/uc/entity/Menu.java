@@ -19,7 +19,7 @@ import java.io.Serializable;
 @ApiModel(value = "菜单")
 public class Menu implements Serializable {
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     @ApiModelProperty(value = "id")
     private Long id;
 

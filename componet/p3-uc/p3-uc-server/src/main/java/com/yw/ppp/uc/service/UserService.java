@@ -7,4 +7,5 @@ import com.yw.ppp.uc.entity.User;
 public interface UserService extends IService<User> {
 
     boolean registerUser(User user);
+
 }

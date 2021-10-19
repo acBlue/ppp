@@ -20,7 +20,7 @@ import java.io.Serializable;
 @ApiModel(value = "用户角色")
 public class Role implements Serializable {
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     @ApiModelProperty(value = "角色ID")
     private Long id;
 

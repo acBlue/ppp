@@ -20,7 +20,7 @@ import java.io.Serializable;
 public class Permission implements Serializable {
 
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     @ApiModelProperty(name = "id", value = "权限ID", required = true)
     private Long id;
     @TableField(value = "name")

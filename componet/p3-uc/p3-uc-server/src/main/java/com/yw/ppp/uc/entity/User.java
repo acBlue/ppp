@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @ApiModel(value = "用户实体")
 public class User implements Serializable {
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     @ApiModelProperty(name = "id", value = "用户ID", allowEmptyValue = false, dataType = "Long")
     @JsonView(UserDetailView.class)
     private Long id;
