@@ -6,6 +6,8 @@ import com.yw.ppp.uc.entity.User;
 
 public interface UserService extends IService<User> {
 
-    boolean registerUser(User user);
+    void registerUser(User user);
+
+    void lockUser(Long user);
 
 }
