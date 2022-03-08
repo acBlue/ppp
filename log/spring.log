@@ -1,344 +1,130 @@
-2021-10-18 21:26:14.934  INFO 7788 --- [main] com.yw.ppp.uc.AdminApplication           : Starting AdminApplication using Java 11 on PC201807032025 with PID 7788 (E:\java\githubwork\ppp\componet\p3-uc\p3-uc-server\target\classes started by Administrator in E:\java\githubwork\ppp)
-2021-10-18 21:26:14.938  INFO 7788 --- [main] com.yw.ppp.uc.AdminApplication           : No active profile set, falling back to default profiles: default
-2021-10-18 21:26:16.373  INFO 7788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-10-18 21:26:16.376  INFO 7788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-10-18 21:26:16.411  INFO 7788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-2021-10-18 21:26:16.574  WARN 7788 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.yw.ppp.admin.repository]' package. Please check your configuration.
-2021-10-18 21:26:17.236  INFO 7788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-10-18 21:26:17.251  INFO 7788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 21:26:17.251  INFO 7788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 21:26:17.357  INFO 7788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 21:26:17.357  INFO 7788 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2325 ms
-2021-10-18 21:26:17.470  WARN 7788 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'meunService': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yw.ppp.uc.repository.MenuRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2021-10-18 21:26:17.473  INFO 7788 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-10-18 21:26:17.522  INFO 7788 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-10-18 21:26:17.560 ERROR 7788 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'meunService': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yw.ppp.uc.repository.MenuRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
-	at com.yw.ppp.uc.AdminApplication.main(AdminApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yw.ppp.uc.repository.MenuRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1790) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1346) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.10.jar:5.3.10]
-	... 20 common frames omitted
-
-2021-10-18 21:28:48.236  INFO 4820 --- [main] com.yw.ppp.uc.AdminApplication           : Starting AdminApplication using Java 11 on PC201807032025 with PID 4820 (E:\java\githubwork\ppp\componet\p3-uc\p3-uc-server\target\classes started by Administrator in E:\java\githubwork\ppp)
-2021-10-18 21:28:48.241  INFO 4820 --- [main] com.yw.ppp.uc.AdminApplication           : No active profile set, falling back to default profiles: default
-2021-10-18 21:28:50.060  INFO 4820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-10-18 21:28:50.064  INFO 4820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-10-18 21:28:50.118  INFO 4820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2021-10-18 21:28:50.347  WARN 4820 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.yw.ppp.admin.repository]' package. Please check your configuration.
-2021-10-18 21:28:51.035  INFO 4820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-10-18 21:28:51.048  INFO 4820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 21:28:51.048  INFO 4820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 21:28:51.158  INFO 4820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 21:28:51.159  INFO 4820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2820 ms
-2021-10-18 21:28:51.253  WARN 4820 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'meunService': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yw.ppp.uc.repository.MenuRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2021-10-18 21:28:51.258  INFO 4820 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-10-18 21:28:51.289  INFO 4820 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-10-18 21:28:51.314 ERROR 4820 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'meunService': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yw.ppp.uc.repository.MenuRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
-	at com.yw.ppp.uc.AdminApplication.main(AdminApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yw.ppp.uc.repository.MenuRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1790) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1346) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.10.jar:5.3.10]
-	... 20 common frames omitted
-
-2021-10-18 21:31:00.915  INFO 1160 --- [main] com.yw.ppp.uc.AdminApplication           : Starting AdminApplication using Java 11 on PC201807032025 with PID 1160 (E:\java\githubwork\ppp\componet\p3-uc\p3-uc-server\target\classes started by Administrator in E:\java\githubwork\ppp)
-2021-10-18 21:31:00.919  INFO 1160 --- [main] com.yw.ppp.uc.AdminApplication           : No active profile set, falling back to default profiles: default
-2021-10-18 21:31:03.443  INFO 1160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-10-18 21:31:03.445  INFO 1160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-10-18 21:31:03.469  INFO 1160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2021-10-18 21:31:04.102  INFO 1160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-10-18 21:31:04.115  INFO 1160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 21:31:04.115  INFO 1160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 21:31:04.201  INFO 1160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 21:31:04.201  INFO 1160 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3206 ms
-2021-10-18 21:31:04.443  INFO 1160 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-10-18 21:31:05.091  INFO 1160 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-10-18 21:31:06.083  WARN 1160 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getRedisConnectionFactory' defined in class path resource [com/yw/ppp/uc/config/RedisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-2021-10-18 21:31:06.087  INFO 1160 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2021-10-18 21:31:06.095  INFO 1160 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2021-10-18 21:31:06.098  INFO 1160 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-10-18 21:31:06.118  INFO 1160 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-10-18 21:31:06.142 ERROR 1160 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getRedisConnectionFactory' defined in class path resource [com/yw/ppp/uc/config/RedisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
-	at com.yw.ppp.uc.AdminApplication.main(AdminApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.10.jar:5.3.10]
-	... 19 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.data.redis.connection.jedis.JedisConverters.toBytes(JedisConverters.java:229) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at org.springframework.data.redis.connection.jedis.JedisConverters.<clinit>(JedisConverters.java:106) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.<clinit>(JedisConnectionFactory.java:93) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at com.yw.ppp.uc.config.RedisConfig.getRedisConnectionFactory(RedisConfig.java:20) ~[classes/:na]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$c7d22fc1.CGLIB$getRedisConnectionFactory$0(<generated>) ~[classes/:na]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$c7d22fc1$$FastClassBySpringCGLIB$$793409ad.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.10.jar:5.3.10]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.10.jar:5.3.10]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$c7d22fc1.getRedisConnectionFactory(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.10.jar:5.3.10]
-	... 20 common frames omitted
-Caused by: java.lang.ClassNotFoundException: redis.clients.jedis.util.SafeEncoder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
-	... 34 common frames omitted
-
-2021-10-18 21:32:05.485  INFO 3920 --- [main] com.yw.ppp.uc.AdminApplication           : Starting AdminApplication using Java 11 on PC201807032025 with PID 3920 (E:\java\githubwork\ppp\componet\p3-uc\p3-uc-server\target\classes started by Administrator in E:\java\githubwork\ppp)
-2021-10-18 21:32:05.493  INFO 3920 --- [main] com.yw.ppp.uc.AdminApplication           : No active profile set, falling back to default profiles: default
-2021-10-18 21:32:07.426  INFO 3920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-10-18 21:32:07.429  INFO 3920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-10-18 21:32:07.451  INFO 3920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2021-10-18 21:32:08.118  INFO 3920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-10-18 21:32:08.131  INFO 3920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 21:32:08.131  INFO 3920 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 21:32:08.227  INFO 3920 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 21:32:08.227  INFO 3920 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2444 ms
-2021-10-18 21:32:08.418  INFO 3920 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-10-18 21:32:09.065  INFO 3920 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-10-18 21:32:10.107  WARN 3920 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getRedisConnectionFactory' defined in class path resource [com/yw/ppp/uc/config/RedisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-2021-10-18 21:32:10.111  INFO 3920 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2021-10-18 21:32:10.117  INFO 3920 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2021-10-18 21:32:10.120  INFO 3920 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-10-18 21:32:10.141  INFO 3920 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-10-18 21:32:10.163 ERROR 3920 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getRedisConnectionFactory' defined in class path resource [com/yw/ppp/uc/config/RedisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
-	at com.yw.ppp.uc.AdminApplication.main(AdminApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.10.jar:5.3.10]
-	... 19 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.data.redis.connection.jedis.JedisConverters.toBytes(JedisConverters.java:229) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at org.springframework.data.redis.connection.jedis.JedisConverters.<clinit>(JedisConverters.java:106) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.<clinit>(JedisConnectionFactory.java:93) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at com.yw.ppp.uc.config.RedisConfig.getRedisConnectionFactory(RedisConfig.java:20) ~[classes/:na]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$3d844cb.CGLIB$getRedisConnectionFactory$1(<generated>) ~[classes/:na]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$3d844cb$$FastClassBySpringCGLIB$$5adab47d.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.10.jar:5.3.10]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.10.jar:5.3.10]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$3d844cb.getRedisConnectionFactory(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.10.jar:5.3.10]
-	... 20 common frames omitted
-Caused by: java.lang.ClassNotFoundException: redis.clients.jedis.util.SafeEncoder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
-	... 34 common frames omitted
-
-2021-10-18 21:32:43.167  INFO 1756 --- [main] com.yw.ppp.uc.AdminApplication           : Starting AdminApplication using Java 11 on PC201807032025 with PID 1756 (E:\java\githubwork\ppp\componet\p3-uc\p3-uc-server\target\classes started by Administrator in E:\java\githubwork\ppp)
-2021-10-18 21:32:43.171  INFO 1756 --- [main] com.yw.ppp.uc.AdminApplication           : No active profile set, falling back to default profiles: default
-2021-10-18 21:32:44.673  INFO 1756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-10-18 21:32:44.676  INFO 1756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-10-18 21:32:44.704  INFO 1756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2021-10-18 21:32:45.410  INFO 1756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-10-18 21:32:45.423  INFO 1756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 21:32:45.424  INFO 1756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 21:32:45.528  INFO 1756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 21:32:45.528  INFO 1756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2216 ms
-2021-10-18 21:32:45.738  INFO 1756 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-10-18 21:32:46.346  INFO 1756 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-10-18 21:32:48.355  INFO 1756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2021-10-18 21:32:48.428  INFO 1756 --- [main] com.yw.ppp.uc.AdminApplication           : Started AdminApplication in 6.236 seconds (JVM running for 8.018)
-2021-10-18 21:33:14.047  INFO 1756 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-18 21:33:14.049  INFO 1756 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-18 21:33:14.051  INFO 1756 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-10-18 21:33:46.546  INFO 1756 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2021-10-18 21:57:32.617  INFO 4268 --- [main] com.yw.ppp.uc.AdminApplication           : Starting AdminApplication using Java 11 on PC201807032025 with PID 4268 (E:\java\githubwork\ppp\componet\p3-uc\p3-uc-server\target\classes started by Administrator in E:\java\githubwork\ppp)
-2021-10-18 21:57:32.624  INFO 4268 --- [main] com.yw.ppp.uc.AdminApplication           : No active profile set, falling back to default profiles: default
-2021-10-18 21:57:34.328  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-10-18 21:57:34.331  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-10-18 21:57:34.360  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2021-10-18 21:57:35.098  INFO 4268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-10-18 21:57:35.111  INFO 4268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 21:57:35.111  INFO 4268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 21:57:35.229  INFO 4268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 21:57:35.229  INFO 4268 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2495 ms
-2021-10-18 21:57:35.464  INFO 4268 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-10-18 21:57:36.151  INFO 4268 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-10-18 21:57:37.241  WARN 4268 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getRedisConnectionFactory' defined in class path resource [com/yw/ppp/uc/config/RedisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-2021-10-18 21:57:37.245  INFO 4268 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2021-10-18 21:57:37.256  INFO 4268 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2021-10-18 21:57:37.261  INFO 4268 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-10-18 21:57:37.313  INFO 4268 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-10-18 21:57:37.339 ERROR 4268 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'getRedisConnectionFactory' defined in class path resource [com/yw/ppp/uc/config/RedisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
-	at com.yw.ppp.uc.AdminApplication.main(AdminApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.connection.RedisConnectionFactory]: Factory method 'getRedisConnectionFactory' threw exception; nested exception is java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.10.jar:5.3.10]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.10.jar:5.3.10]
-	... 19 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: redis/clients/jedis/util/SafeEncoder
-	at org.springframework.data.redis.connection.jedis.JedisConverters.toBytes(JedisConverters.java:229) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at org.springframework.data.redis.connection.jedis.JedisConverters.<clinit>(JedisConverters.java:106) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.<clinit>(JedisConnectionFactory.java:93) ~[spring-data-redis-2.5.5.jar:2.5.5]
-	at com.yw.ppp.uc.config.RedisConfig.getRedisConnectionFactory(RedisConfig.java:20) ~[classes/:na]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$f241d33f.CGLIB$getRedisConnectionFactory$1(<generated>) ~[classes/:na]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$f241d33f$$FastClassBySpringCGLIB$$5677a834.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.10.jar:5.3.10]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.10.jar:5.3.10]
-	at com.yw.ppp.uc.config.RedisConfig$$EnhancerBySpringCGLIB$$f241d33f.getRedisConnectionFactory(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.10.jar:5.3.10]
-	... 20 common frames omitted
-Caused by: java.lang.ClassNotFoundException: redis.clients.jedis.util.SafeEncoder
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
-	... 34 common frames omitted
-
-2021-10-18 22:01:44.692  INFO 1584 --- [main] com.yw.ppp.uc.AdminApplication           : Starting AdminApplication using Java 11 on PC201807032025 with PID 1584 (E:\java\githubwork\ppp\componet\p3-uc\p3-uc-server\target\classes started by Administrator in E:\java\githubwork\ppp)
-2021-10-18 22:01:44.696  INFO 1584 --- [main] com.yw.ppp.uc.AdminApplication           : No active profile set, falling back to default profiles: default
-2021-10-18 22:01:46.784  INFO 1584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-10-18 22:01:46.792  INFO 1584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-10-18 22:01:46.868  INFO 1584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
-2021-10-18 22:01:48.012  INFO 1584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-10-18 22:01:48.022  INFO 1584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 22:01:48.022  INFO 1584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 22:01:48.128  INFO 1584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 22:01:48.128  INFO 1584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3328 ms
-2021-10-18 22:01:48.329  INFO 1584 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-10-18 22:01:48.863  INFO 1584 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-10-18 22:01:51.674  INFO 1584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2021-10-18 22:01:51.770  INFO 1584 --- [main] com.yw.ppp.uc.AdminApplication           : Started AdminApplication in 8.983 seconds (JVM running for 11.565)
-2021-10-18 22:02:52.753  INFO 6888 --- [main] com.yw.ppp.uc.AdminApplication           : Starting AdminApplication using Java 11 on PC201807032025 with PID 6888 (E:\java\githubwork\ppp\componet\p3-uc\p3-uc-server\target\classes started by Administrator in E:\java\githubwork\ppp)
-2021-10-18 22:02:52.757  INFO 6888 --- [main] com.yw.ppp.uc.AdminApplication           : No active profile set, falling back to default profiles: default
-2021-10-18 22:02:54.763  INFO 6888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-10-18 22:02:54.766  INFO 6888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-10-18 22:02:54.805  INFO 6888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-2021-10-18 22:02:55.850  INFO 6888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-10-18 22:02:55.866  INFO 6888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-18 22:02:55.867  INFO 6888 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-10-18 22:02:55.964  INFO 6888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-18 22:02:55.964  INFO 6888 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3101 ms
-2021-10-18 22:02:56.182  INFO 6888 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-10-18 22:02:56.824  INFO 6888 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-10-18 22:02:58.705  INFO 6888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2021-10-18 22:02:58.768  INFO 6888 --- [main] com.yw.ppp.uc.AdminApplication           : Started AdminApplication in 7.065 seconds (JVM running for 9.166)
+2021-10-21 21:10:17.641  INFO 6865 --- [main] com.yw.ppp.uc.UcApplication              : Starting UcApplication using Java 11.0.12 on zhangyaowendeMacBook-Pro.local with PID 6865 (/Users/zhangyaowen/IdeaProjects/ppp/componet/p3-uc/p3-uc-server/target/classes started by zhangyaowen in /Users/zhangyaowen/IdeaProjects/ppp)
+2021-10-21 21:10:17.652  INFO 6865 --- [main] com.yw.ppp.uc.UcApplication              : No active profile set, falling back to default profiles: default
+2021-10-21 21:10:18.784  INFO 6865 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 21:10:18.787  INFO 6865 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 21:10:18.821  INFO 6865 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2021-10-21 21:10:19.463  INFO 6865 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-10-21 21:10:19.475  INFO 6865 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:10:19.476  INFO 6865 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-21 21:10:19.543  INFO 6865 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:10:19.543  INFO 6865 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1819 ms
+2021-10-21 21:10:19.702  INFO 6865 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-10-21 21:10:20.607  INFO 6865 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-10-21 21:10:22.238  INFO 6865 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-10-21 21:10:22.400  INFO 6865 --- [main] com.yw.ppp.uc.UcApplication              : Started UcApplication in 5.331 seconds (JVM running for 6.103)
+2021-10-21 21:10:39.485  INFO 6865 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-21 21:10:39.486  INFO 6865 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-21 21:10:39.487  INFO 6865 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-21 21:12:07.677  INFO 6865 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-10-21 21:12:07.688  INFO 6865 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-10-21 21:12:12.346  INFO 6890 --- [main] com.yw.ppp.uc.UcApplication              : Starting UcApplication using Java 11.0.12 on zhangyaowendeMacBook-Pro.local with PID 6890 (/Users/zhangyaowen/IdeaProjects/ppp/componet/p3-uc/p3-uc-server/target/classes started by zhangyaowen in /Users/zhangyaowen/IdeaProjects/ppp)
+2021-10-21 21:12:12.349  INFO 6890 --- [main] com.yw.ppp.uc.UcApplication              : No active profile set, falling back to default profiles: default
+2021-10-21 21:12:13.233  INFO 6890 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 21:12:13.236  INFO 6890 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 21:12:13.258  INFO 6890 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2021-10-21 21:12:13.790  INFO 6890 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-10-21 21:12:13.798  INFO 6890 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:12:13.799  INFO 6890 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-21 21:12:13.858  INFO 6890 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:12:13.858  INFO 6890 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1472 ms
+2021-10-21 21:12:13.988  INFO 6890 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-10-21 21:12:14.581  INFO 6890 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-10-21 21:12:42.246  INFO 6890 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-10-21 21:12:42.396  INFO 6890 --- [main] com.yw.ppp.uc.UcApplication              : Started UcApplication in 30.67 seconds (JVM running for 32.24)
+2021-10-21 21:12:42.559  INFO 6890 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-10-21 21:12:42.568  INFO 6890 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-10-21 21:12:45.030  INFO 6894 --- [main] com.yw.ppp.uc.UcApplication              : Starting UcApplication using Java 11.0.12 on zhangyaowendeMacBook-Pro.local with PID 6894 (/Users/zhangyaowen/IdeaProjects/ppp/componet/p3-uc/p3-uc-server/target/classes started by zhangyaowen in /Users/zhangyaowen/IdeaProjects/ppp)
+2021-10-21 21:12:45.033  INFO 6894 --- [main] com.yw.ppp.uc.UcApplication              : No active profile set, falling back to default profiles: default
+2021-10-21 21:12:45.862  INFO 6894 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 21:12:45.865  INFO 6894 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 21:12:45.888  INFO 6894 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-10-21 21:12:46.375  INFO 6894 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-10-21 21:12:46.383  INFO 6894 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:12:46.383  INFO 6894 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-21 21:12:46.444  INFO 6894 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:12:46.445  INFO 6894 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1364 ms
+2021-10-21 21:12:46.569  INFO 6894 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-10-21 21:12:47.225  INFO 6894 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-10-21 21:12:53.688  INFO 6894 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-10-21 21:12:53.848  INFO 6894 --- [main] com.yw.ppp.uc.UcApplication              : Started UcApplication in 9.431 seconds (JVM running for 10.43)
+2021-10-21 21:13:13.420  INFO 6894 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-21 21:13:13.421  INFO 6894 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-21 21:13:13.423  INFO 6894 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-10-21 21:13:28.367  INFO 6894 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-10-21 21:13:28.375  INFO 6894 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-10-21 21:13:33.413  INFO 6902 --- [main] com.yw.ppp.uc.UcApplication              : Starting UcApplication using Java 11.0.12 on zhangyaowendeMacBook-Pro.local with PID 6902 (/Users/zhangyaowen/IdeaProjects/ppp/componet/p3-uc/p3-uc-server/target/classes started by zhangyaowen in /Users/zhangyaowen/IdeaProjects/ppp)
+2021-10-21 21:13:33.416  INFO 6902 --- [main] com.yw.ppp.uc.UcApplication              : No active profile set, falling back to default profiles: default
+2021-10-21 21:13:34.218  INFO 6902 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 21:13:34.220  INFO 6902 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 21:13:34.241  INFO 6902 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2021-10-21 21:13:34.744  INFO 6902 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-10-21 21:13:34.753  INFO 6902 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:13:34.753  INFO 6902 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-21 21:13:34.817  INFO 6902 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:13:34.817  INFO 6902 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1351 ms
+2021-10-21 21:13:34.937  INFO 6902 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-10-21 21:13:35.546  INFO 6902 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-10-21 21:13:36.617  INFO 6902 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-10-21 21:13:36.759  INFO 6902 --- [main] com.yw.ppp.uc.UcApplication              : Started UcApplication in 3.874 seconds (JVM running for 4.687)
+2021-10-21 21:13:51.506  INFO 6902 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-21 21:13:51.507  INFO 6902 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-21 21:13:51.508  INFO 6902 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-21 21:22:33.115  INFO 6902 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-10-21 21:22:33.127  INFO 6902 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-10-21 21:36:39.745  INFO 7104 --- [main] com.yw.ppp.uc.UcApplication              : Starting UcApplication using Java 11.0.12 on zhangyaowendeMacBook-Pro.local with PID 7104 (/Users/zhangyaowen/IdeaProjects/ppp/componet/p3-uc/p3-uc-server/target/classes started by zhangyaowen in /Users/zhangyaowen/IdeaProjects/ppp)
+2021-10-21 21:36:39.756  INFO 7104 --- [main] com.yw.ppp.uc.UcApplication              : No active profile set, falling back to default profiles: default
+2021-10-21 21:36:40.648  INFO 7104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 21:36:40.650  INFO 7104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 21:36:40.672  INFO 7104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-10-21 21:36:41.186  INFO 7104 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-10-21 21:36:41.195  INFO 7104 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:36:41.196  INFO 7104 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-21 21:36:41.266  INFO 7104 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:36:41.266  INFO 7104 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1449 ms
+2021-10-21 21:36:41.402  INFO 7104 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-10-21 21:36:42.041  INFO 7104 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-10-21 21:36:43.204  INFO 7104 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-10-21 21:36:43.417  INFO 7104 --- [main] com.yw.ppp.uc.UcApplication              : Started UcApplication in 4.228 seconds (JVM running for 5.833)
+2021-10-21 21:37:14.827  INFO 7104 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-21 21:37:14.828  INFO 7104 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-21 21:37:14.829  INFO 7104 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-21 21:38:30.058  INFO 7104 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-10-21 21:38:30.068  INFO 7104 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-10-21 21:39:56.441  INFO 7137 --- [main] com.yw.ppp.uc.UcApplication              : Starting UcApplication using Java 11.0.12 on zhangyaowendeMacBook-Pro.local with PID 7137 (/Users/zhangyaowen/IdeaProjects/ppp/componet/p3-uc/p3-uc-server/target/classes started by zhangyaowen in /Users/zhangyaowen/IdeaProjects/ppp)
+2021-10-21 21:39:56.444  INFO 7137 --- [main] com.yw.ppp.uc.UcApplication              : No active profile set, falling back to default profiles: default
+2021-10-21 21:39:57.323  INFO 7137 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 21:39:57.325  INFO 7137 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 21:39:57.345  INFO 7137 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2021-10-21 21:39:57.834  INFO 7137 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-10-21 21:39:57.843  INFO 7137 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:39:57.843  INFO 7137 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-21 21:39:57.901  INFO 7137 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:39:57.901  INFO 7137 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1413 ms
+2021-10-21 21:39:58.019  INFO 7137 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-10-21 21:39:58.575  INFO 7137 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-10-21 21:39:59.691  INFO 7137 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-10-21 21:39:59.846  INFO 7137 --- [main] com.yw.ppp.uc.UcApplication              : Started UcApplication in 3.803 seconds (JVM running for 4.522)
+2021-10-21 21:40:03.856  INFO 7137 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-21 21:40:03.857  INFO 7137 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-21 21:40:03.858  INFO 7137 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-21 21:40:48.258  INFO 7137 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-10-21 21:40:48.271  INFO 7137 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-10-21 21:50:16.622  INFO 7233 --- [main] com.yw.ppp.uc.UcApplication              : Starting UcApplication using Java 11.0.12 on zhangyaowendeMacBook-Pro.local with PID 7233 (/Users/zhangyaowen/IdeaProjects/ppp/componet/p3-uc/p3-uc-server/target/classes started by zhangyaowen in /Users/zhangyaowen/IdeaProjects/ppp)
+2021-10-21 21:50:16.625  INFO 7233 --- [main] com.yw.ppp.uc.UcApplication              : No active profile set, falling back to default profiles: default
+2021-10-21 21:50:17.509  INFO 7233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-21 21:50:17.511  INFO 7233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-21 21:50:17.533  INFO 7233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2021-10-21 21:50:18.092  INFO 7233 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-10-21 21:50:18.102  INFO 7233 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-21 21:50:18.102  INFO 7233 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-21 21:50:18.172  INFO 7233 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-21 21:50:18.173  INFO 7233 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1498 ms
+2021-10-21 21:50:18.300  INFO 7233 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-10-21 21:50:18.978  INFO 7233 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-10-21 21:50:20.150  INFO 7233 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-10-21 21:50:20.334  INFO 7233 --- [main] com.yw.ppp.uc.UcApplication              : Started UcApplication in 4.419 seconds (JVM running for 5.372)
+2021-10-21 21:50:26.279  INFO 7233 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-21 21:50:26.280  INFO 7233 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-21 21:50:26.282  INFO 7233 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-10-21 21:51:03.950  INFO 7233 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-10-21 21:51:03.961  INFO 7233 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

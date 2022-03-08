@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,10 +22,10 @@ public abstract class BaseRestfulController extends BaseGeneralController{
 
     protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
-    @Autowired
+    @Resource
     protected HttpServletRequest request;
 
-    @Autowired
+    @Resource
     protected HttpServletResponse response;
 
     /**

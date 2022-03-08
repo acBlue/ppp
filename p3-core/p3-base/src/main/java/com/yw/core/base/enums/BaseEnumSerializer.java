@@ -21,5 +21,7 @@ public class BaseEnumSerializer extends JsonSerializer<BaseEnum> {
         jsonGenerator.writeFieldName("desc");
         jsonGenerator.writeString(viewEnum.getDesc());
         jsonGenerator.writeEndObject();
+
+
 	}
 }
