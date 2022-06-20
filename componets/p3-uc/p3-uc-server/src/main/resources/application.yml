@@ -64,6 +64,10 @@ spring:
         max-active: 8
         max-wait: 2000
         min-idle: 0
+  cloud:
+    nacos:
+      discovery:
+        server-addr:
 
 
 

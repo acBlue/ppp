@@ -3,6 +3,7 @@ package com.yw.ppp.uc.api.dto;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -32,6 +33,7 @@ public class UserDTO implements Serializable {
     @ApiModelProperty(name = "lastLogin", value = "最后登录时间", dataType = "LocalDate")
     private LocalDateTime lastLogin;
 
+    @NotNull(message = "")
     @ApiModelProperty(name = "active", value = "账户是否锁定", dataType = "Boolean")
     private Boolean active;
 }
